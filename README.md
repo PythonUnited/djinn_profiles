@@ -1,4 +1,4 @@
 djinn_profiles
-==============
+===================
 
-Djinn intranet user and group profiles
+This module provides the base models for user and group profiles.
