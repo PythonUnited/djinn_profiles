@@ -20,7 +20,7 @@ class GroupProfile(AbstractGroupProfile):
 
     class Meta:
         app_label = 'djinn_profiles'
-        swappable = "GROUPPROFILE_MODEL"
+        swappable = "DJINN_GROUPPROFILE_MODEL"
 
 
 CTRegistry.register("groupprofile", {"class": GroupProfile,

@@ -34,5 +34,8 @@ setup(name='djinn_profiles',
       install_requires = requires,
       tests_require= requires,
       test_suite="djinn_profiles",
-      entry_points = ""
+      entry_points = """\
+      [djinn.app]
+      urls=djinn_profiles:get_urls
+      """
       )
