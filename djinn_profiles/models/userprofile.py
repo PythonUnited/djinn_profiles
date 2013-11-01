@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from djinn_contenttypes.registry import CTRegistry
+from markupfield.fields import MarkupField
 
 
 class UserProfileManager(models.Manager):
@@ -9,7 +10,7 @@ class UserProfileManager(models.Manager):
     """
     The manager for the userprofile
     """
-    
+
     def get_by_natural_key(self, name):
         return self.get(name=name)
 
@@ -22,6 +23,10 @@ class AbstractUserProfile(models.Model):
     user = models.ForeignKey(User)
     email = models.EmailField(max_length=100, null=True, blank=True)
     interest = models.TextField(null=True, blank=True)
+
+    # - plain text markup, calls urlize and replaces text with linebreaks
+    expertise = MarkupField(
+        _('Expertise'), markup_type='plain', null=True, blank=True)
 
     objects = UserProfileManager()
 

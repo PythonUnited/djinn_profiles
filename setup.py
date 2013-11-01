@@ -7,7 +7,7 @@ README = open(os.path.join(here, 'README.md')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = [
-    'django', 'djinn_core'
+    'django', 'djinn_core', 'django-markupfield',
     ]
 
 setup(name='djinn_profiles',
