@@ -24,7 +24,8 @@ class AbstractUserProfile(models.Model):
     email = models.EmailField(max_length=100, null=True, blank=True)
 
     # - plain text markup, calls urlize and replaces text with linebreaks
-    expertise = MarkupField(markup_type='plain')
+    expertise = MarkupField(
+        _('Expertise'), markup_type='plain', null=True, blank=True)
 
     objects = UserProfileManager()
 
