@@ -23,6 +23,9 @@ class AbstractUserProfile(models.Model):
     user = models.ForeignKey(User)
     email = models.EmailField(max_length=100, null=True, blank=True)
 
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    mobile_number = models.CharField(max_length=20, null=True, blank=True)
+
     # - plain text markup, calls urlize and replaces text with linebreaks
     expertise = MarkupField(
         _('Expertise'), markup_type='plain', null=True, blank=True)
