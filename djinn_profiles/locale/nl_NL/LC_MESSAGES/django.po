@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-11-01 15:17+0100\n"
-"PO-Revision-Date: 2013-11-01 15:17+0100\n"
-"Last-Translator:   <dokter@w20e.com>\n"
+"PO-Revision-Date: 2013-11-08 16:36+0100\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: models/userprofile.py:29
 msgid "Expertise"
-msgstr "Kennis en expertise"
+msgstr "Welke kennis en expertise heb je?"
 
 #: models/userprofile.py:46
 msgid "UserProfile"
