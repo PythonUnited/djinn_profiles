@@ -1,5 +1,4 @@
 #-*- coding: utf-8 -*-
-import sys
 from django.conf import settings
 from django.core import exceptions
 from django.db.models import get_model
@@ -16,7 +15,9 @@ def get_userprofile_model():
             parts = settings.DJINN_USERPROFILE_MODEL.split('.')
             model = get_model(parts[0], parts[-1])
         except:
-            raise exceptions.ImproperlyConfigured('Erroneous userprofile model')
+
+            raise exceptions.ImproperlyConfigured(
+                'Erroneous userprofile model'
+            )
 
         return model
-
