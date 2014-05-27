@@ -11,7 +11,7 @@ requires = [
     ]
 
 setup(name='djinn_profiles',
-      version="1.0.0",
+      version="1.0.1",
       description='Djinn Intranet user and group profiles',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
