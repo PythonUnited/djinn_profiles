@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from pgauth.models import UserGroup
 from djinn_contenttypes.registry import CTRegistry
+from djinn_contenttypes.models.sharing import SharingMixin
 
 
 class AbstractGroupProfile(models.Model):
@@ -16,7 +16,7 @@ class AbstractGroupProfile(models.Model):
         abstract = True
 
 
-class GroupProfile(AbstractGroupProfile):
+class GroupProfile(AbstractGroupProfile, SharingMixin):
 
     class Meta:
         app_label = 'djinn_profiles'
