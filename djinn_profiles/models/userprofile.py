@@ -20,7 +20,7 @@ class AbstractUserProfile(models.Model):
     """ Profile per user """
 
     name = models.CharField(_('Name'), max_length=100)
-    user = models.ForeignKey(User)
+    user = models.OneToOneField(User)
     email = models.EmailField(max_length=100, null=True, blank=True)
     interest = models.TextField(null=True, blank=True)
 
