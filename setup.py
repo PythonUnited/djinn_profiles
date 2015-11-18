@@ -7,15 +7,17 @@ README = open(os.path.join(here, 'README.md')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = [
-    'django', 'djinn_core', 'django-markupfield',
+    'django',
+    'djinn_core',
+    'django-markupfield'
     ]
 
 setup(name='djinn_profiles',
-      version="1.0.4",
+      version="1.0.6",
       description='Djinn Intranet user and group profiles',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
-          "Development Status :: 3 - Alpha",
+          "Development Status :: 5 - Production/Stable",
           "Framework :: Django",
           "Intended Audience :: Developers",
           "License :: Freely Distributable",
