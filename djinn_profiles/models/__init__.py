@@ -1,2 +1,2 @@
-from userprofile import UserProfile
-from groupprofile import GroupProfile
+from .userprofile import UserProfile
+from .groupprofile import GroupProfile

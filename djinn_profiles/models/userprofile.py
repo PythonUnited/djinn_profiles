@@ -20,7 +20,7 @@ class AbstractUserProfile(models.Model):
     """ Profile per user """
 
     name = models.CharField(_('Name'), max_length=100)
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     email = models.EmailField(max_length=100, null=True, blank=True)
     interest = models.TextField(null=True, blank=True)
 
@@ -36,6 +36,8 @@ class AbstractUserProfile(models.Model):
     def __unicode__(self):
 
         return self.name
+
+    __str__ = __unicode__
 
     def get_owner(self):
 

@@ -1,8 +1,8 @@
 #-*- coding: utf-8 -*-
 from django.conf import settings
 from django.core import exceptions
-from django.db.models import get_model
-from models.userprofile import UserProfile
+from django.apps import apps
+from .models.userprofile import UserProfile
 
 
 def get_userprofile_model():
@@ -13,7 +13,7 @@ def get_userprofile_model():
 
         try:
             parts = settings.DJINN_USERPROFILE_MODEL.split('.')
-            model = get_model(parts[0], parts[-1])
+            model = apps.get_model(parts[0], parts[-1])
         except:
 
             raise exceptions.ImproperlyConfigured(

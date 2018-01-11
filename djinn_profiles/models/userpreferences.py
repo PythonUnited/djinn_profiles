@@ -7,7 +7,7 @@ from djinn_contenttypes.registry import CTRegistry
 class AbstractUserPreferences(models.Model):
 
     """ Set of system Preferences per user """
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     class Meta:
 
