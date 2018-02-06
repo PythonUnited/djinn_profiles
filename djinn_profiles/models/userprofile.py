@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
+from djinn_contenttypes.models.swappablemodel_mixin import SwappableModelMixin
 from djinn_contenttypes.registry import CTRegistry
 from markupfield.fields import MarkupField
 
@@ -15,7 +16,7 @@ class UserProfileManager(models.Manager):
         return self.get(name=name)
 
 
-class AbstractUserProfile(models.Model):
+class AbstractUserProfile(models.Model, SwappableModelMixin):
 
     """ Profile per user """
 

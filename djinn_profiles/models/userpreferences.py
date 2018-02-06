@@ -2,9 +2,10 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from djinn_contenttypes.registry import CTRegistry
+from djinn_contenttypes.models.swappablemodel_mixin import SwappableModelMixin
 
 
-class AbstractUserPreferences(models.Model):
+class AbstractUserPreferences(models.Model, SwappableModelMixin):
 
     """ Set of system Preferences per user """
     user = models.OneToOneField(User, on_delete=models.CASCADE)

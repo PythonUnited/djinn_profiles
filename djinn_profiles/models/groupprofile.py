@@ -2,9 +2,10 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from djinn_contenttypes.registry import CTRegistry
 from djinn_contenttypes.models.sharing import SharingMixin
+from djinn_contenttypes.models.swappablemodel_mixin import SwappableModelMixin
 
 
-class AbstractGroupProfile(models.Model):
+class AbstractGroupProfile(SwappableModelMixin, models.Model):
 
     name = models.CharField(_('Name'), max_length=100)
 
