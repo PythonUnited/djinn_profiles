@@ -20,4 +20,4 @@ def get_userprofile_model():
                 'Erroneous userprofile model'
             )
 
-        return model
+    return model
